@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/stationFragment">
+
+    <fragment
+        android:id="@+id/stationFragment"
+        android:name="com.epump.epumpterminal.ui.StationFragment"
+        android:label="fragment_station"
+        tools:layout="@layout/fragment_station" >
+        <action
+            android:id="@+id/action_stationFragment_to_pumpFragment"
+            app:destination="@id/pumpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pumpDetailFragment"
+        android:name="com.epump.epumpterminal.ui.PumpDetailFragment"
+        tools:layout="@layout/fragment_pump_detail"
+        android:label="fragment_pump_detail">
+        <argument
+            android:name="pump"
+            app:argType="com.epump.epumpterminal.models.Pump"/>
+    </fragment>
+    <fragment
+        android:id="@+id/pumpFragment"
+        android:name="com.epump.epumpterminal.ui.PumpFragment"
+        android:label="fragment_pump"
+        tools:layout="@layout/fragment_pump" >
+
+        <argument
+            android:name="branchId"
+            app:argType="string"/>
+
+        <argument
+            android:name="stationName"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_pumpFragment_to_pumpDetailFragment"
+            app:destination="@id/pumpDetailFragment" />
+        <action
+            android:id="@+id/action_pumpFragment_to_addDeviceFragment"
+            app:destination="@id/addDeviceFragment" />
+        <action
+            android:id="@+id/action_pumpFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/terminalFragment"
+        android:name="com.epump.epumpterminal.ui.TerminalFragment"
+        android:label="fragment_terminal"
+        tools:layout="@layout/fragment_terminal" />
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.epump.epumpterminal.ui.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary">
+        <argument
+            android:name="stationName"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addDeviceFragment"
+        android:name="com.epump.epumpterminal.ui.AddDeviceFragment"
+        android:label="fragment_add_device"
+        tools:layout="@layout/fragment_add_device" />
+
+    <dialog
+        android:id="@+id/file_bottom_sheet"
+        android:name="com.epump.epumpterminal.ui.bottomsheets.FileBottomSheetFragment"
+        tools:layout="@layout/file_list"
+        />
+
+    <dialog
+        android:id="@+id/wifi_bottom_sheet"
+        android:name="com.epump.epumpterminal.ui.bottomsheets.WifiBottomSheetFragment"
+        tools:layout="@layout/wifi_list"
+        />
+
+
+
+
+
+</navigation>

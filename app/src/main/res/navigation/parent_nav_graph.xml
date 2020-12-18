@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.epump.epumpterminal.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mappingFragment"
+            app:destination="@id/mappingFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mappingFragment"
+        android:name="com.epump.epumpterminal.ui.MappingFragment"
+        android:label="fragment_mapping"
+        tools:layout="@layout/fragment_mapping" >
+
+        <action
+            android:id="@+id/action_mappingFragment_to_mappableStationFragment"
+            app:destination="@id/mappableStationFragment"/>
+        <action
+            android:id="@+id/action_mappingFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_mappingFragment_to_controllerFragment"
+            app:destination="@id/controllerFragment" />
+
+        <action
+            android:id="@+id/action_mappingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/mappingFragment"
+            app:popUpToInclusive="true" />
+
+        <!--        <action-->
+<!--            android:id="@+id/action_mappingFragment_to_dashBoardFragment"-->
+<!--            app:destination="@id/dashboardFragment"/>-->
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/controllerFragment"
+        android:name="com.epump.epumpterminal.ui.ControllerFragment"
+        android:label="fragment_controller"
+        tools:layout="@layout/fragment_controller" />
+
+    <fragment
+        android:id="@+id/mappableStationFragment"
+        android:name="com.epump.epumpterminal.ui.MappableStationFragment"
+        android:label="fragment_mappable_station"
+        tools:layout="@layout/fragment_mappable_station" >
+
+        <argument
+            android:name="booleanQueryForEndpoint"
+            app:argType="boolean"/>
+
+        <action
+            android:id="@+id/action_mappableStationFragment_to_mapStationFragment"
+            app:destination="@id/mapStationFragment"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.epump.epumpterminal.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/mapStationFragment"
+        android:name="com.epump.epumpterminal.ui.MapStationFragment"
+        android:label="fragment_map_station"
+        tools:layout="@layout/fragment_map_station" >
+        <argument
+            android:name="StationDetails"
+            app:argType="com.epump.epumpterminal.models.StationDetails"/>
+        <argument
+            android:name="id"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.epump.epumpterminal.ui.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_mappingFragment"
+            app:destination="@id/mappingFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

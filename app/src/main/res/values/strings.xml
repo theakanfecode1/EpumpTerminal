@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Epump Terminal</string>
+    <string name="welcome_message">Hello, Welcome Back</string>
+    <string name="sign_in_to_monitor_your_tech_setup">Sign in to monitor your tech setup</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="find_station">Find Station</string>
+    <string name="no_station_available">No station available</string>
+    <string name="station_address">Station Address</string>
+    <string name="station_name">Station Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_station">Station</string>
+    <string name="menu_mapping">Mapping</string>
+    <string name="menu_terminal">Terminal</string>
+    <string name="pump_name_holder">Pump name:</string>
+    <string name="find_pump">Find Pump</string>
+    <string name="manual_reading">Manual Reading</string>
+    <string name="digital_reading">Digital Reading</string>
+    <string name="price_ltrs">Price(ltrs)</string>
+    <string name="submit">Submit</string>
+    <string name="fill_the_form_below">Fill The Form Below</string>
+    <string name="manager_s_signature">Manager\'s Signature</string>
+    <string name="manager_s_name">Manager\'s name</string>
+    <string name="device_type">Device Type</string>
+    <string name="device_id">Device id</string>
+    <string name="select_pumps">Select Pumps</string>
+    <string name="fill_the_form_below_to_add_a_device">fill the form below to add a device</string>
+    <string name="add_device">Add Device</string>
+    <string name="send">Send</string>
+    <string name="test">TEST</string>
+    <string name="go_to_dashboard">Go to Dashboard</string>
+    <string name="log_out">Log Out</string>
+    <string name="what_would_you_like_to_do">What would you like to do?</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="probe_address">Probe Address</string>
+    <string name="string_true">true</string>
+    <string name="string_false">false</string>
+    <string name="is_demo">Is demo</string>
+    <string name="clear">Clear</string>
+    <string name="manager_s_phone_number">Manager\'s Phone Number</string>
+    <string name="probe_address_comma_separated_values">Probe Address (comma separated)</string>
+</resources>

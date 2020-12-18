@@ -1,0 +1,69 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorDarkBlue</item>
+        <item name="colorPrimaryDark">#000522</item>
+        <item name="colorAccent">@color/colorYellow</item>
+    </style>
+
+    <style name="DialogTheme" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/colorTranslucent</item>
+    </style>
+
+    <style name="LoginTextStyle">
+        <item name="android:background">@drawable/login_edittext_background</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/nunito_light</item>
+        <item name="hintTextAppearance">@font/nunito_light</item>
+        <item name="android:drawablePadding">10dp</item>
+
+    </style>
+
+    <style name="BottomNavTextActiveAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorDarkBlue</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+
+    </style>
+
+    <style name="BottomNavTextInActiveAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+
+    </style>
+
+    <style name="CheckBoxStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDarkBlue</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+
+    </style>
+
+    <style name="CardViewStyle">
+        <item name="cardElevation">0dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+
+        <item name="android:fontFamily">@font/nunito_bold</item>
+    </style>
+
+</resources>
